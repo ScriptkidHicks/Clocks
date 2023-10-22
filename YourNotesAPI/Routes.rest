@@ -1,0 +1,52 @@
+GET http://localhost:3500/Subscribers
+
+###
+
+POST http://localhost:3500/Subscribers 
+Content-Type: application/json
+
+{
+    "name": "Godrick", "password": "anExample", "email": "tammashicks@gmail.com"
+
+}
+
+### verify one correctly
+
+Post http://localhost:3500/Subscribers/login
+Content-Type: application/json
+
+{
+    "name" : "Godrick",
+    "password" : "anExample",
+    "email" : "tammashicks@gmail.com"
+}
+
+### verify one no name or email
+
+Post http://localhost:3500/Subscribers/login
+Content-Type: application/json
+
+{
+    "password" : "anExample"
+}
+
+### verify one no password
+
+Post http://localhost:3500/Subscribers/login
+Content-Type: application/json
+
+{
+    "name" : "Godrick",
+    "email" : "tammashicks@gmail.com"
+}
+
+### verify one bad password
+
+Post http://localhost:3500/Subscribers/login
+Content-Type: application/json
+
+{
+    "name" : "Godrick",
+    "password" : "mn",
+    "email" : "tammashicks@gmail.com"
+}
