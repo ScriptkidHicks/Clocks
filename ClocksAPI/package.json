@@ -1,7 +1,7 @@
 {
   "name": "clockssapi",
   "version": "1.0.0",
-  "description": "an Api for the yournotes ap",
+  "description": "an Api for the clocks app",
   "main": "ClocksAPI.js",
   "scripts": {
     "devStart": "nodemon databaseAPI.js"
